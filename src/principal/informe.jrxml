@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3be50557-be23-444e-981b-dc6a28798e2e">
+	<property name="ireport.zoom" value="1.9487171000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="6"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     producto.`Codigo_Producto` AS producto_Codigo_Producto,
+     producto.`Nombre_producto` AS producto_Nombre_producto,
+     producto.`Precio_Unitario` AS producto_Precio_Unitario,
+     producto.`Cantidad_Producto` AS producto_Cantidad_Producto,
+     producto.`Edad_de_Uso` AS producto_Edad_de_Uso
+FROM
+     `producto` producto]]>
+	</queryString>
+	<field name="producto_Codigo_Producto" class="java.lang.String"/>
+	<field name="producto_Nombre_producto" class="java.lang.String"/>
+	<field name="producto_Precio_Unitario" class="java.lang.Float"/>
+	<field name="producto_Cantidad_Producto" class="java.lang.Integer"/>
+	<field name="producto_Edad_de_Uso" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ba8c90fa-1ee7-437a-9242-ef416d8319d9" x="200" y="0" width="171" height="31"/>
+				<textElement>
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   Puzzle Haven]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7d055255-2e53-444d-8431-bbde9cdd35cc" x="170" y="31" width="273" height="33"/>
+				<textElement>
+					<font fontName="Times New Roman" size="24"/>
+				</textElement>
+				<text><![CDATA[ Inventario de Mercaderia]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="f77daa2b-1865-4ca9-9870-7587aca74408" x="0" y="0" width="72" height="68"/>
+				<imageExpression><![CDATA["C:\\Users\\HYMA 57\\Desktop\\img\\cubo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="f77daa2b-1865-4ca9-9870-7587aca74408" x="500" y="0" width="72" height="68"/>
+				<imageExpression><![CDATA["C:\\Users\\HYMA 57\\Desktop\\img\\cubo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="473bd389-b457-4679-9937-e2462fbd4d24" x="13" y="0" width="309" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Informe de mercaderia disponible de la empresa Puzzle Haven]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="56c990cc-7831-4d52-868d-ed5d302b66e2" x="343" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Fecha de Informe:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement uuid="b4278fa8-4eff-43f3-90d8-f37c1f4a1aba" x="443" y="0" width="129" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0c61c986-136a-4b25-ae60-2b34c7349b54" x="0" y="1" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo_Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4c46e6d4-d326-4c49-a651-2bbfaef0f4d7" x="100" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre_Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8f017b53-7b47-4710-855a-54b98d4ec0f2" x="243" y="1" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio_Unitario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6657484c-ce3b-42d5-83bf-ec6a162db6b7" x="343" y="1" width="110" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad_Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1e30d362-1360-4df6-8c9d-5c0e0f347bae" x="472" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad_de_Uso]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c60b6a9d-9db0-4cc4-bac7-f0b360469b6d" x="0" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto_Codigo_Producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4a112c34-20b7-494c-8771-e8dffee055d9" x="100" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto_Nombre_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7d6da2a3-3921-4c46-9b43-2f294b92ed56" x="243" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto_Precio_Unitario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5aa310c4-2f28-42ee-a17f-edb6cb1f42d9" x="343" y="0" width="112" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto_Cantidad_Producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2494ad2f-6039-4eae-be3c-0af118372565" x="472" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto_Edad_de_Uso}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="18" splitType="Stretch"/>
+	</summary>
+</jasperReport>
